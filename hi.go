@@ -4,15 +4,20 @@ import (
 	"fmt"
 )
 
+func sum(x int, y int) int {
+  return x + y
+}
+
 type Person struct {
 	name string
 	age  uint8
 }
 
 func main() {
-	person := new(Person)
+  a := 20
+  b := 20
 
-	*person = Person{"Robert", 34}
+  result := sum(a, b)
 
-	fmt.Printf("Name: %s, Age: %d\n", person.name, person.age)
+  fmt.Printf("%d + %d = %d\n", a, b, result)
 }
