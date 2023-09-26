@@ -2,8 +2,13 @@ package main
 
 import "fmt"
 
-func main() {
-	arr := []int32{3, 10}
+type Person struct {
+	name string
+	age  uint8
+}
 
-	fmt.Println(arr)
+func main() {
+	person := Person{"Anna", 42}
+
+	fmt.Printf("Name: %s, age: %d\n", person.name, person.age)
 }
