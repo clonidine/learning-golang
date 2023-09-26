@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Person struct {
 	name string
@@ -8,7 +10,11 @@ type Person struct {
 }
 
 func main() {
-	person := Person{"Anna", 42}
+	persons := []Person{{"Anna", 42}, {"Robert", 50}}
 
-	fmt.Printf("Name: %s, age: %d\n", person.name, person.age)
+	for i := 0; i < len(persons); i++ {
+		person := persons[i]
+
+		fmt.Printf("Name: %s, Age: %d\n", person.name, person.age)
+	}
 }
