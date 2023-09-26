@@ -10,11 +10,9 @@ type Person struct {
 }
 
 func main() {
-	persons := []Person{{"Anna", 42}, {"Robert", 50}}
+	person := new(Person)
 
-	for i := 0; i < len(persons); i++ {
-		person := persons[i]
+	*person = Person{"Robert", 34}
 
-		fmt.Printf("Name: %s, Age: %d\n", person.name, person.age)
-	}
+	fmt.Printf("Name: %s, Age: %d\n", person.name, person.age)
 }
