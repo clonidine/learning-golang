@@ -3,13 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var (
-		a string = "hi"
-		b int32
-		c int64
-	)
+	arr := []int32{3, 10}
 
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(c)
+	fmt.Println(arr)
 }
